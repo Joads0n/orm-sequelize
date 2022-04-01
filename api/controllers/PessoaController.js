@@ -53,6 +53,20 @@ class PessoaController {
         }
     }
 
+    static async restorePessoa(req, res){
+        const { id } = req.params;
+        try {
+            await database.Pessoas.restore({
+                where: {
+                    id : Number(id)
+                }
+            });
+            return res.status(200).json({mensagem: `id ${id} restaurado`});
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+    }
+
     static async getMatricula(req, res) {
         const { estudanteId, matriculaId } = req.params
         try {
@@ -106,6 +120,21 @@ class PessoaController {
                 }
             });
             return res.status(200).json(`id ${matriculaId} deletado`);
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+    }
+
+    static async restoreMatricula(req, res){
+        const { estudanteId, matriculaId } = req.params
+        try {
+            await database.Matriculas.restore({
+                where: {
+                    id: Number(matriculaId),
+                    estudante_id: Number(estudanteId)
+                }
+            });
+            return res.status(200).json({mensagem: `A matricula de ID ${matriculaId} do estudante ID ${estudanteId} restaurado`});
         } catch (error) {
             return res.status(500).json(error.message);
         }
