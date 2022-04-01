@@ -6,6 +6,7 @@ class PessoaController {
             const pessoas = await database.Pessoas.findAll();
             return res.status(200).json(pessoas);
         } catch (error) {
+            console.log(pessoas)
             return res.status(500).json(error.message)
         }
     }
