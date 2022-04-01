@@ -1,4 +1,4 @@
-# orm-sequelize
+# ORM Sequelize
 
 Implementation of a project Backend in NodeJs, using the ORM Sequelize, during the course of Alura, aim at the practice the topics:
 
