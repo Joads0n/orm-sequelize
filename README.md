@@ -9,7 +9,8 @@ Implementation of a project Backend in NodeJs, using the ORM Sequelize, during t
 - Soft delete and restore;
 - Scopes and validation;
 - Model Querying (attributes, having, group, limit, order);
-- Operations (gte, lte).
+- Operations (gte, lte);
+- Transactions.
 
 
 [Documentation Sequelize](https://sequelize.org/v6/index.html)
