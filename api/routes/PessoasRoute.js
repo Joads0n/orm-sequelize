@@ -14,6 +14,8 @@ router.put('/pessoas/:id', PessoaController.updatePessoa);
 router.delete('/pessoas/:id', PessoaController.deletePessoa);
 router.post('/pessoas/:id/restaura', PessoaController.restorePessoa);
 
+router.post('/pessoas/:estudanteId/cancela', PessoaController.cancelaMatriculaPessoa);
+
 router.get('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.getMatricula);
 router.post('/pessoas/:estudanteId/matricula', PessoaController.createMatricula);
 router.put('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.updateMatricula);
