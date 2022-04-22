@@ -10,7 +10,9 @@ Implementation of a project Backend in NodeJs, using the ORM Sequelize, during t
 - Scopes and validation;
 - Model Querying (attributes, having, group, limit, order);
 - Operations (gte, lte);
-- Transactions.
+- Transactions;
+- Services;
+- Refactoring code.
 
 
-[Documentation Sequelize](https://sequelize.org/v6/index.html)
+[Documentation Sequelize](https://sequelize.org/docs/v6/)
